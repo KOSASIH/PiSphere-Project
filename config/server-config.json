@@ -1,0 +1,36 @@
+{
+    "server": {
+        "port": 3000,
+        "host": "localhost",
+        "environment": "development",
+        "apiPrefix": "/api",
+        "cors": {
+            "enabled": true,
+            "origins": ["http://localhost:3000", "https://yourdomain.com"]
+        },
+        "logging": {
+            "level": "info",
+            "format": "combined",
+            "transports": [
+                {
+                    "type": "console",
+                    "options": {
+                        "colorize": true
+                    }
+                },
+                {
+                    "type": "file",
+                    "options": {
+                        "filename": "logs/server.log",
+                        "maxSize": "10m",
+                        "maxFiles": "5d"
+                    }
+                }
+            ]
+        }
+    },
+    "security": {
+        "jwtSecret": "your_jwt_secret",
+        "sessionTimeout": 3600 // in seconds
+    }
+}
