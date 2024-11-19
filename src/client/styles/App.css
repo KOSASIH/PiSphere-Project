@@ -1,0 +1,144 @@
+/* App.css */
+
+/* CSS Variables for easy theming */
+:root {
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --secondary-color: #28a745;
+    --secondary-dark: #218838;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --white: #ffffff;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Main container styles */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button styles */
+.button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 10px;
+    }
+
+    .header, .footer {
+        padding: 10px;
+    }
+
+    .button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Animation for loading states */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading::after {
+    content: '';
+    border: 5px solid var(--primary-color);
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error message styles */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Card styles for components */
+.card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin: 15px 0;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
