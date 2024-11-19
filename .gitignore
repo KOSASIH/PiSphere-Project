@@ -1,2 +1,38 @@
-# Google App Engine generated folder
-appengine-generated/
+
+### `.gitignore`
+
+```plaintext
+# Node modules
+node_modules/
+src/client/node_modules/
+src/server/node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Truffle artifacts
+/build/
+*.json
+
+# MongoDB data files
+data/
+
+# Temporary files
+tmp/
+temp/
