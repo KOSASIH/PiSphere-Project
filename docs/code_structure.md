@@ -8,7 +8,8 @@ PiSphere-Project/
 │   ├── architecture.md           # System architecture overview
 │   ├── governance.md             # Governance model details
 │   ├── user-guide.md             # User guide for wallet and features
-│   └── API-docs/                 # API documentation
+│   ├── api-docs/                 # API documentation
+│   └── tutorials/                # Interactive tutorials and educational content
 │
 ├── contracts/                    # Smart contracts
 │   ├── governance/                # Governance-related contracts
@@ -20,9 +21,11 @@ PiSphere-Project/
 │   ├── marketplace/               # Marketplace contracts
 │   │   ├── Marketplace.sol         # Marketplace contract
 │   │   └── Escrow.sol             # Escrow contract
-│   └── utils/                    # Utility contracts
-│       ├── SafeMath.sol           # Safe math library
-│       └── AccessControl.sol       # Access control library
+│   ├── utils/                    # Utility contracts
+│   │   ├── SafeMath.sol           # Safe math library
+│   │   └── AccessControl.sol       # Access control library
+│   └── proxy/                    # Proxy contracts for upgradability
+│       └── Proxy.sol              # Proxy contract
 │
 ├── src/                          # Source code
 │   ├── client/                   # Frontend application
@@ -62,4 +65,28 @@ PiSphere-Project/
 │   ├── database-config.json       # Database configuration
 │   └── server-config.json         # Server configuration
 │
-└── .env                          # Environment variables
+├── .env                          # Environment variables
+│
+├── analytics/                    # Analytics dashboard
+│   ├── dashboard.js               # Analytics dashboard component
+│   └── api.js                     # Analytics API
+│
+├── did/                          # Decentralized identity system
+│   ├── did.js                     # DID library
+│   └── verifiable-credentials.js  # Verifiable credentials library
+│
+├── amm/                          # Automated market maker
+│   ├── amm.js                     # AMM library
+│   └── liquidity-pool.js          # Liquidity pool management
+│
+├── nft/                          # Non-fungible token support
+│   ├── nft.js                     # NFT library
+│   └── marketplace-nft.js         # NFT marketplace integration
+│
+├── ai/                           # AI-powered recommendations
+│   ├── ai.js                      # AI library
+│   └── recommendation-engine.js   # Recommendation engine
+│
+└── community/                    # Community engagement tools
+    ├── forum.js                   # Forum component
+    └── chat.js                    # Chat
