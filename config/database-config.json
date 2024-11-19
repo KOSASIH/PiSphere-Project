@@ -1,0 +1,18 @@
+{
+    "database": {
+        "type": "mongodb",
+        "host": "localhost",
+        "port": 27017,
+        "username": "yourUsername",
+        "password": "yourPassword",
+        "databaseName": "yourDatabase",
+        "options": {
+            "useNewUrlParser": true,
+            "useUnifiedTopology": true
+        }
+    },
+    "migrations": {
+        "enabled": true,
+        "migrationPath": "./migrations"
+    }
+}
