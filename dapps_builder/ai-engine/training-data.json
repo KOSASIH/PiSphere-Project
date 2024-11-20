@@ -1,0 +1,14 @@
+{
+    "inputShape": 3,
+    "outputShape": 2,
+    "inputs": [
+        [1, 0, 0],  // Example input for a simple DApp
+        [0, 1, 0],  // Example input for a more complex DApp
+        [0, 0, 1]   // Example input for a social DApp
+    ],
+    "outputs": [
+        [1, 0],  // Suggestion for a marketplace DApp
+        [0, 1],  // Suggestion for a social DApp
+        [1, 1]   // Suggestion for a hybrid DApp
+    ]
+}
