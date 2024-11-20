@@ -1,0 +1,32 @@
+/* analytics/dashboard.css */
+
+.dashboard {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.analytics-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.charts {
+    margin-top: 20px;
+}
+
+.loading, .error {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+}
