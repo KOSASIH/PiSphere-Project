@@ -3,9 +3,10 @@
 const WebSocket = require('ws');
 
 class Chat {
-    constructor() {
+    constructor(dao) {
         this.rooms = new Map(); // Map to hold chat rooms
         this.users = new Set(); // Set to hold registered users
+        this.dao = dao; // DAO instance for governance
         this.wss = new WebSocket.Server({ noServer: true }); // WebSocket server
     }
 
@@ -17,12 +18,15 @@ class Chat {
         this.users.add(username);
     }
 
-    // Create a new chat room
-    createRoom(roomName) {
+    // Create a new chat room with governance approval
+    async createRoom(roomName) {
         if (this.rooms.has(roomName)) {
             throw new Error('Room already exists');
         }
-        this.rooms.set(roomName, { messages: [] });
+
+        // Propose room creation to DAO
+        const proposalId = await this.dao.propose('CreateRoom', { roomName });
+        return proposalId; // Return proposal ID for tracking
     }
 
     // Send a message to a room
