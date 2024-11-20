@@ -7,14 +7,36 @@ PiSphere-Project is the official repository for the PiSphere decentralized ecosy
 PiSphere is a decentralized ecosystem designed to empower users through a community-driven blockchain platform. This project aims to create a secure, scalable, and user-friendly environment for digital currency and decentralized applications (dApps). 
 
 ## Features
-- **Decentralized Governance**: Managed through a DAO (Decentralized Autonomous Organization) with voting mechanisms.
-- **Multi-Signature Wallet**: Enhanced security for governance proposals and fund management.
-- **Upgradable Smart Contracts**: Utilize proxy patterns to allow for seamless contract upgrades.
-- **Real-Time Updates**: WebSocket integration for real-time notifications on transactions and proposals.
-- **Progressive Web App (PWA)**: Offline capabilities and improved user experience.
-- **GraphQL API**: Efficient data fetching and manipulation.
-- **Oracles Integration**: Fetch real-world data for smart contracts, enabling features like price feeds.
-- **Automated Testing**: Continuous integration with automated testing for both smart contracts and application code.
+
+- **Decentralized Governance**: Managed through a DAO (Decentralized Autonomous Organization) with voting mechanisms, allowing community members to participate in decision-making processes.
+
+- **Multi-Signature Wallet**: Enhanced security for governance proposals and fund management, ensuring that multiple parties must approve transactions before they are executed.
+
+- **Upgradable Smart Contracts**: Utilize proxy patterns to allow for seamless contract upgrades, enabling the application to evolve without losing state or requiring complex migrations.
+
+- **Real-Time Updates**: WebSocket integration for real-time notifications on transactions and proposals, ensuring users are always informed of the latest activities.
+
+- **Progressive Web App (PWA)**: Offline capabilities and improved user experience, allowing users to access the platform even without an internet connection.
+
+- **GraphQL API**: Efficient data fetching and manipulation, providing a flexible and powerful way to interact with the backend services.
+
+- **Oracles Integration**: Fetch real-world data for smart contracts, enabling features like price feeds and other external data dependencies.
+
+- **Automated Testing**: Continuous integration with automated testing for both smart contracts and application code, ensuring high-quality and reliable software through rigorous testing practices.
+
+- **User  Authentication**: Secure user registration and login mechanisms, allowing users to create accounts and manage their profiles.
+
+- **Threaded Discussions**: Support for nested replies in forum threads, enabling more organized and meaningful conversations.
+
+- **Moderation Tools**: Features for moderators to manage content, including the ability to delete threads and ban users.
+
+- **Search Functionality**: Advanced search capabilities to help users find relevant threads and messages quickly.
+
+- **Notifications**: User notifications for replies, mentions, and other important activities within the community.
+
+- **Customizable User Profiles**: Users can personalize their profiles with avatars, bios, and other information.
+
+- **Analytics Dashboard**: Insights into user engagement, popular threads, and community activity to help guide future development.
 
 ## Getting Started
 
