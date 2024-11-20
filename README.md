@@ -33,9 +33,7 @@
 [![Fintech Global](https://img.shields.io/badge/Fintech%20Global-Member-purple?style=for-the-badge&logo=money&logoColor=white)](https://fintechglobal.com/)
 [![Fintech World](https://img.shields.io/badge/Fintech%20World-Member-red?style=for-the-badge&logo=money&logoColor=white)](https://fintechworld.com/)
 [![Fintech Connect](https://img.shields.io/badge/Fintech%20Connect-Member-lightblue?style=for-the-badge&logo=money&logoColor=white)](https://fintechconnect.com/)
-[![Fintech Forum](https://img.shields.io/badge/Fintech%20Forum-Member-lightgreen?style=for-the-badge&logo=money&logoColor=white)](https://fintechforum.com/)
-[![Fintech Network](https://img.shields.io/badge/Fintech%20Network-Member-orange?style=for-the-badge&logo=money&logoColor=white)](https://fintechnetwork.com/)
-[![Fintech Society](https://img.shields.io/badge/Fintech%20Society-Member-blue?style=for-the-badge&logo=money&logoColor=white)](https://fintechsociety.com/)
+
 # PiSphere-Project
 PiSphere-Project is the official repository for the PiSphere decentralized ecosystem, designed to empower users through a community-driven, multi-layer blockchain architecture. This repository contains the core codebase, smart contracts, governance mechanisms, and tools necessary for building and maintaining the PiSphere network. Join us in creating a fully decentralized platform that prioritizes user autonomy, security, and innovation in the digital currency space. Contribute, collaborate, and help shape the future of decentralized finance and community engagement!
 
