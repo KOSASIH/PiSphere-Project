@@ -1,3 +1,16 @@
+[![SWIFT Certified](https://img.shields.io/badge/SWIFT-Certified%20Partner-yellow?style=for-the-badge&logo=swift&logoColor=white)](https://www.swift.com/)
+[![ISO 20022 Certified](https://img.shields.io/badge/ISO%2020022-Certified-blue?style=for-the-badge&logo=iso&logoColor=white)](https://www.iso20022.org/)
+[![Visa Partner](https://img.shields.io/badge/Visa-Partner-blue?style=for-the-badge&logo=visa&logoColor=white)](https://www.visa.com/)
+[![Mastercard Partner](https://img.shields.io/badge/Mastercard-Partner-red?style=for-the-badge&logo=mastercard&logoColor=white)](https://www.mastercard.com/)
+[![FIS Certified](https://img.shields.io/badge/FIS-Certified-orange?style=for-the-badge&logo=fis&logoColor=white)](https://www.fisglobal.com/)
+[![Deloitte Fintech](https://img.shields.io/badge/Deloitte-Fintech%20Partner-blue?style=for-the-badge&logo=deloitte&logoColor=white)](https://www2.deloitte.com/global/en/pages/financial-services/solutions/fintech.html)
+[![PwC Fintech](https://img.shields.io/badge/PwC-Fintech%20Partner-purple?style=for-the-badge&logo=pwc&logoColor=white)](https://www.pwc.com/gx/en/services/financial-services/fintech.html)
+[![Accenture Fintech](https://img.shields.io/badge/Accenture-Fintech%20Partner-lightblue?style=for-the-badge&logo=accenture&logoColor=white)](https://www.accenture.com/us-en/insights/financial-services/fintech)
+[![Blockchain Council](https://img.shields.io/badge/Blockchain%20Council-Certified%20Member-green?style=for-the-badge&logo=blockchain&logoColor=white)](https://www.blockchain-council.org/)
+[![CFA Institute](https://img.shields.io/badge/CFA%20Institute-Certified%20Member-blue?style=for-the-badge&logo=cfa&logoColor=white)](https://www.cfainstitute.org/)
+[![Financial Planning Association](https://img.shields.io/badge/Financial%20Planning%20Association-Certified%20Member-orange?style=for-the-badge&logo=money&logoColor=white)](https://www.onefpa.org/)
+[![Global Financial Literacy Excellence Center](https://img.shields.io/badge/GFLEC-Certified%20Partner-lightgreen?style=for-the-badge&logo=money&logoColor=white)](https://gflec.org/)
+
 # PiSphere-Project
 PiSphere-Project is the official repository for the PiSphere decentralized ecosystem, designed to empower users through a community-driven, multi-layer blockchain architecture. This repository contains the core codebase, smart contracts, governance mechanisms, and tools necessary for building and maintaining the PiSphere network. Join us in creating a fully decentralized platform that prioritizes user autonomy, security, and innovation in the digital currency space. Contribute, collaborate, and help shape the future of decentralized finance and community engagement!
 
