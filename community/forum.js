@@ -1,9 +1,10 @@
 // community/forum.js
 
 class Forum {
-    constructor() {
+    constructor(dao) {
         this.threads = new Map(); // Map to hold threads
         this.users = new Set(); // Set to hold registered users
+        this.dao = dao; // DAO instance for governance
     }
 
     // Register a new user
@@ -14,28 +15,19 @@ class Forum {
         this.users.add(username);
     }
 
-    // Create a new thread
-    createThread(title, content, author) {
+    // Create a new thread with governance approval
+    async createThread(title, content, author) {
         if (!this.users.has(author)) {
             throw new Error('User  not registered');
         }
 
-        const threadId = this.threads.size + 1; // Simple ID generation
-        const thread = {
-            id: threadId,
-            title,
-            content,
-            author,
-            replies: [],
-            createdAt: new Date(),
-        };
-
-        this.threads.set(threadId, thread);
-        return thread;
+        // Propose thread creation to DAO
+        const proposalId = await this.dao.propose('CreateThread', { title, content, author });
+        return proposalId; // Return proposal ID for tracking
     }
 
     // Post a reply to a thread
-    postReply(threadId, content, author) {
+    async postReply(threadId, content, author) {
         if (!this.users.has(author)) {
             throw new Error('User  not registered');
         }
