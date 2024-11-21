@@ -1,0 +1,55 @@
+# Application Configuration for PiSphere
+
+server:
+  port: 8080
+  context-path: /api
+
+database:
+  type: postgresql
+  host: localhost
+  port: 5432
+  name: pisphere_db
+  username: db_user
+  password: db_password
+  connection-pool:
+    max-size: 20
+    min-size: 5
+    timeout: 30000
+
+logging:
+  level:
+    root: INFO
+    com.pisphere: DEBUG
+  file:
+    name: logs/application.log
+    max-size: 10MB
+    max-history: 30
+
+security:
+  jwt:
+    secret: your_jwt_secret
+    expiration: 3600 # in seconds
+
+features:
+  enableFeatureX: true
+  enableFeatureY: false
+
+api:
+  base-url: https://api.pisphere.com
+  timeout: 5000 # in milliseconds
+
+oracles:
+  enabled: true
+  providers:
+    - name: "Provider1"
+      url: "https://provider1.com/api"
+    - name: "Provider2"
+      url: "https://provider2.com/api"
+
+crosschain:
+  enabled: true
+  networks:
+    - name: "Ethereum"
+      rpc-url: "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+    - name: "Binance Smart Chain"
+      rpc-url: "https://bsc-dataseed.binance.org/"
