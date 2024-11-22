@@ -1,0 +1,31 @@
+1. Proxy.sol: Kontrak utama yang menangani delegasi ke implementasi.
+
+
+2. ImplementationV1.sol: Versi pertama kontrak implementasi.
+
+
+3. ImplementationV2.sol: Versi kedua kontrak implementasi (untuk pembaruan).
+
+
+4. Storage.sol: Kontrak penyimpanan data.
+Deployment & Penggunaan
+
+1. Deploy ImplementationV1 dan salin alamat kontraknya.
+
+
+2. Deploy Proxy dengan parameter alamat dari ImplementationV1.
+
+
+3. Interaksi dengan Proxy akan menggunakan logika dari ImplementationV1.
+Penjelasan Fitur
+
+1. Keamanan Admin: Hanya admin yang dapat memperbarui implementasi.
+
+
+2. Pemisahan Data & Logika: Data tetap tersimpan di Proxy, sehingga pembaruan logika tidak menghapus data.
+
+
+3. Fallback Function: Semua panggilan dialihkan ke implementasi saat ini.
+
+
+4. Modularitas: Memudahkan penambahan atau perubahan logika kontrak di masa depan.
