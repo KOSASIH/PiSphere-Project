@@ -1,15 +1,18 @@
-// arbitrageOpportunities.js
+// src/algorithms/arbitrageOpportunities.js
 const axios = require('axios');
 
 class ArbitrageOpportunities {
     constructor(targetPrice) {
         this.targetPrice = targetPrice;
         this.exchanges = ['exchange1', 'exchange2'];
+        this.checkInterval = 30000; // Check every 30 seconds
     }
 
     async findArbitrage() {
-        const prices = await this.fetchPrices();
-        this.checkForArbitrage(prices);
+        setInterval(async () => {
+            const prices = await this.fetchPrices();
+            this.checkForArbitrage(prices);
+        }, this.checkInterval);
     }
 
     async fetchPrices() {
@@ -21,7 +24,6 @@ class ArbitrageOpportunities {
     checkForArbitrage(prices) {
         const priceDiff = prices[0].price - prices[1].price;
         if (Math.abs(priceDiff) > 1) { // Arbitrage threshold
-            console.log(`Arbitrage opportunity detected: ${priceDiff}`);
             this.executeArbitrage(prices);
         }
     }
@@ -31,5 +33,3 @@ class ArbitrageOpportunities {
         console.log(`Executing arbitrage between exchanges at prices: ${prices[0].price} and ${prices[1].price}`);
     }
 }
-
-module.exports = ArbitrageOpportunities;
