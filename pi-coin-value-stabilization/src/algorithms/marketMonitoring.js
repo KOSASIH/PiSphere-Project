@@ -1,10 +1,10 @@
 // src/algorithms/marketMonitoring.js
 const axios = require('axios');
+const DynamicPricing = require('./dynamicPricing');
 
 class MarketMonitoring {
-    constructor(targetPrice, dynamicPricing) {
-        this.targetPrice = targetPrice;
-        this.dynamicPricing = dynamicPricing;
+    constructor() {
+        this.dynamicPricing = new DynamicPricing();
         this.checkInterval = 60000; // Check every minute
     }
 
