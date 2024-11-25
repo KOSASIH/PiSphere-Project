@@ -1,25 +1,16 @@
-// dynamicPricing.js
-const axios = require('axios');
-
+// src/algorithms/dynamicPricing.js
 class DynamicPricing {
     constructor(targetPrice) {
         this.targetPrice = targetPrice;
         this.priceAdjustmentFactor = 0.05; // 5% adjustment
     }
 
-    adjustPrice(currentPrice) {
+    adjustSupply(currentPrice, currentSupply) {
         if (currentPrice < this.targetPrice) {
-            return currentPrice * (1 + this.priceAdjustmentFactor);
+            return currentSupply * (1 + this.priceAdjustmentFactor); // Increase supply
         } else if (currentPrice > this.targetPrice) {
-            return currentPrice * (1 - this.priceAdjustmentFactor);
+            return currentSupply * (1 - this.priceAdjustmentFactor); // Decrease supply
         }
-        return currentPrice;
-    }
-
-    async fetchMarketData() {
-        const response = await axios.get('https://api.example.com/marketdata');
-        return response.data;
+        return currentSupply; // No change
     }
 }
-
-module.exports = DynamicPricing;
