@@ -1,0 +1,31 @@
+{
+    "app": {
+        "name": "Pi Coin value stabilization",
+        "version": "1.0.0",
+        "port": 3000
+    },
+    "database": {
+        "url": "mongodb://localhost:27017/pi_coin",
+        "options": {
+            "useNewUrlParser": true,
+            "useUnifiedTopology": true
+        }
+    },
+    "api": {
+        "marketDataFetcher": {
+            "binanceApiKey": "YOUR_BINANCE_API_KEY",
+            "coinbaseApiKey": "YOUR_COINBASE_API_KEY"
+        }
+    },
+    "logging": {
+        "level": "info",
+        "logFile": "logs/app.log"
+    },
+    "notification": {
+        "emailService": {
+            "service": "gmail",
+            "user": "your-email@gmail.com",
+            "pass": "your-email-password"
+        }
+    }
+}
