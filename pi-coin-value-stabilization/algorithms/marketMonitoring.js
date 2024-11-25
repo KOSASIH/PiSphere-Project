@@ -1,33 +1,34 @@
-// marketMonitoring.js
+// src/algorithms/marketMonitoring.js
 const axios = require('axios');
 
 class MarketMonitoring {
-    constructor(targetPrice) {
+    constructor(targetPrice, dynamicPricing) {
         this.targetPrice = targetPrice;
-        this.alertThreshold = 10; // Price change threshold
+        this.dynamicPricing = dynamicPricing;
+        this.checkInterval = 60000; // Check every minute
     }
 
     async monitorMarket() {
-        const priceData = await this.fetchPriceData();
-        this.checkForAlerts(priceData);
+        setInterval(async () => {
+            const currentPrice = await this.fetchCurrentPrice();
+            const currentSupply = await this.fetchCurrentSupply();
+            const newSupply = this.dynamicPricing.adjustSupply(currentPrice, currentSupply);
+            await this.updateSupply(newSupply);
+        }, this.checkInterval);
     }
 
-    async fetchPriceData() {
-        const response = await axios.get('https://api.example.com/prices');
-        return response.data;
+    async fetchCurrentPrice() {
+        const response = await axios.get('https://api.example.com/pi-coin-price');
+        return response.data.price;
     }
 
-    checkForAlerts(priceData) {
-        priceData.forEach((data) => {
-            if (Math.abs(data.price - this.targetPrice) > this.alertThreshold) {
-                this.sendAlert(data);
-            }
-        });
+    async fetchCurrentSupply() {
+        // Fetch current supply from the blockchain or database
+        return currentSupply; // Placeholder
     }
 
-    sendAlert(data) {
-        console.log(`Alert! Price deviation detected: ${data.price}`);
+    async updateSupply(newSupply) {
+        // Update the supply on the blockchain or database
+        console.log(`Updated supply to: ${newSupply}`);
     }
 }
-
-module.exports = MarketMonitoring;
