@@ -1,7 +1,7 @@
 // src/algorithms/dynamicPricing.js
 class DynamicPricing {
-    constructor(targetPrice) {
-        this.targetPrice = targetPrice;
+    constructor() {
+        this.targetPrice = 314.159; // Set target price to $314.159
         this.priceAdjustmentFactor = 0.05; // 5% adjustment
     }
 
